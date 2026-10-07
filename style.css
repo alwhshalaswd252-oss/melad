@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0a1e;
+    color: #f1f1f1;
+    font-size: 17px;
+    font-family: 'Tajawal', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+a {
+    font-family: inherit;
+}
+
+/* الهيدر */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 30px;
+    background-color: rgba(20, 14, 38, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 34px;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 18px;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5, #4adede);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.site-header nav a {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+    color: #ff6ec4;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(120, 115, 245, 0.35), transparent 70%);
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.hero-logo {
+    width: 70px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0 0 14px 0;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5, #4adede);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    color: #c4bdd9;
+    font-size: 17px;
+    margin: 0 0 28px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 13px 30px;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(120, 115, 245, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(120, 115, 245, 0.55);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #f1f1f1;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: border-color 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: #4adede;
+}
+
+/* أقسام عامة */
+.section {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0 24px;
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.section-desc {
+    text-align: center;
+    color: #a99fc2;
+    margin: 0 0 36px 0;
+    font-size: 15px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(160deg, #1c1533, #150f28);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 110, 196, 0.4);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.card p {
+    color: #b3aac6;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+}
+
+.project-thumb {
+    height: 110px;
+    background: linear-gradient(135deg, #7873f5, #ff6ec4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tag-digital {
+    background: rgba(74, 222, 222, 0.15);
+    color: #4adede;
+}
+
+.tag-physical {
+    background: rgba(255, 110, 196, 0.15);
+    color: #ff6ec4;
+}
+
+.price {
+    background: linear-gradient(90deg, #4adede, #7873f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px 0 14px 0;
+}
+
+.btn-order {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #4adede, #7873f5);
+    color: #0f0a1e;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.btn-order:hover {
+    opacity: 0.85;
+}
+
+.store-note {
+    text-align: center;
+    color: #776f8c;
+    font-size: 13px;
+    margin-top: 24px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #776f8c;
+    font-size: 14px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #a99fc2;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ff6ec4;
+}
+
+/* تأثير الظهور التدريجي عند التمرير */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* الموبايل */
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .site-header nav {
+        gap: 14px;
+        justify-content: center;
+    }
+
+    .site-header nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 16px 40px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .section {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
